@@ -151,8 +151,8 @@ fun transfersHandler(method: String, suffix: String, params: QueryParams): Respo
     }
 }
 
-fun startServer() {
-    val server = HttpServer.create(InetSocketAddress(8080), 0)
+fun startServer(port: Int) {
+    val server = HttpServer.create(InetSocketAddress(port), 0)
 
     server.createContext("/v1/accounts/") {
         http -> handler(http) {
@@ -166,6 +166,7 @@ fun startServer() {
     }
 
     server.executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors())
-    logger.info("Start server")
     server.start()
+
+    logger.info("Server started on $port")
 }
