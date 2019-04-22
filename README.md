@@ -7,9 +7,9 @@ gradle clean build
 
 To start the server, run:
 ```
-java -jar build/libs/MoneyTransfers-1.0.jar
+java -jar build/libs/MoneyTransfers-1.0.jar <port>
 ```
-Server starts on port 8080.
+If port is not specified, server starts on port 3001.
 
 Server's HTTP API is rather minimalistic:
 
