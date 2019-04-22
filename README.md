@@ -9,6 +9,7 @@ To start the server, run:
 ```
 java -jar build/libs/MoneyTransfers-1.0.jar
 ```
+Server starts on port 8080.
 
 Server's HTTP API is rather minimalistic:
 
